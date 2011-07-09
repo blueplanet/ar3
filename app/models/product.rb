@@ -10,4 +10,8 @@ class Product < ActiveRecord::Base
   def price_must_be_at_lease_a_cent
     errors.add(:price, 'は最小でも0.01以上でないといけない') if price.nil? || price < 0.01
   end
+
+  def self.find_products_for_sale
+    all(:order => "title")
+  end
 end
