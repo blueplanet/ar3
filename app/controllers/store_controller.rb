@@ -7,6 +7,10 @@ class StoreController < ApplicationController
     product = Product.find(params[:id])
     @cart = find_cart
     @cart.add_product(product)
+  rescue ActiveRecord::RecordNotFound
+    logger.error("無効な商品ID#{params[:id]}にアクセスしようとしました")
+    flash[:notice] = "無効な商品です"
+    redirect_to :action => 'index'
   end
 
 private
