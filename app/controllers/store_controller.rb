@@ -8,7 +8,9 @@ class StoreController < ApplicationController
     product = Product.find(params[:id])
     @cart = find_cart
     @cart.add_product(product)
-    redirect_to_index
+    respond_to do |format|
+      format.js
+    end
   rescue ActiveRecord::RecordNotFound
     logger.error("無効な商品ID#{params[:id]}にアクセスしようとしました")
     redirect_to_index("無効な商品です")
