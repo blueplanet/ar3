@@ -1,7 +1,19 @@
 <h2>Pragmatic Cart</h2>
 
-<ul>
+<div class="cart-title">Cart</div>
+<table>
   <% for item in @cart.items %>
-    <li><%= item.quantity %> &times; <%=h item.title %></li>
+    <tr>
+      <td><%= item.quantity %>&times;</td>
+      <td><%= item.title %></td>
+      <td class="iem=price"><%= number_to_currency(item.price) %></td>
+    </tr>
   <% end %>
-</ul>
+
+  <tr class="total-line">
+    <td colspan="2">合計</td>
+    <td class="total-cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+
+<%= button_to 'Empty cart', :action => 'empty_cart' %>

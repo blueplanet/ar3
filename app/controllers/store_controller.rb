@@ -9,7 +9,16 @@ class StoreController < ApplicationController
     @cart.add_product(product)
   rescue ActiveRecord::RecordNotFound
     logger.error("無効な商品ID#{params[:id]}にアクセスしようとしました")
-    flash[:notice] = "無効な商品です"
+    redirect_to_index("無効な商品です")
+  end
+
+  def empty_cart
+    session[:cart] = nil
+    redirect_to_index("カートは現在空です")
+  end
+  
+  def redirect_to_index(msg)
+    flash[:notice] = msg
     redirect_to :action => 'index'
   end
 
