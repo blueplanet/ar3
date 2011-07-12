@@ -31,6 +31,12 @@ class User < ActiveRecord::Base
     self.hashed_password = User.encrypted_password(self.password, self.salt)
   end
 
+  def after_destroy
+    if User.count.zero?
+      raise "Last user canot delete"
+    end
+  end
+
 private
   def password_non_blank
     errors.add(:password, "Plaease type password") if hashed_password.blank?
