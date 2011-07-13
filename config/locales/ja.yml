@@ -1,0 +1,18 @@
+ja:
+  layout:
+    title: "プログラミング本棚"
+    side:
+      home: "ホーム"
+      questions: "質問"
+      news: "ニュース"
+      contact: "連絡"
+
+    cart:
+      title: "あなたのカート"
+      button:
+        empty: "カートを空にする"
+        checkout: "チェックアウト"
+  main:
+    title: "プログラミング本カタログ"
+    button:
+      add: "カートに追加"
