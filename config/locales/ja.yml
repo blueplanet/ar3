@@ -1,4 +1,6 @@
 ja:
+  flash:
+    thanks: "注文ありがとうございました"
   layout:
     title: "プログラミング本棚"
     side:
@@ -16,3 +18,39 @@ ja:
     title: "プログラミング本カタログ"
     button:
       add: "カートに追加"
+  checkout:
+    legend: "詳細情報を入力してください"
+    name: "氏名"
+    address: "住所"
+    email: "メール"
+    pay_type: "支払い方式"
+    pay_prompt: "支払い方式を選択してください"
+    submit: "注文"
+
+  number:
+  currency:
+    format:
+      unit: "Y"
+      precision: 2
+      separator: "."
+      delimiter: ","
+      format: "%u%n"
+  activerecord:
+    errors:
+      template:
+        body: "下記の内容を修正してください"
+        header:
+          one: "{{model}} には１つ問題があります"
+          other: "{{model}}には、{{count}} 個の問題があります"
+      messages:
+        inclusion: "必須入力です"
+        blank: "空は許さない"
+
+    modules:
+      order: "注文"
+    attributes:
+      order:
+        address: "住所"
+        name: "氏名"
+        email: "メール"
+        pay_type: "支払い方式"
