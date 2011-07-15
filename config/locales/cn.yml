@@ -1,0 +1,59 @@
+
+cn:
+  flash:
+    thanks: "感谢您的订单"
+  layout:
+    title: "程序员书架"
+    side:
+      home: "主页"
+      questions: "疑问"
+      news: "新闻"
+      contact: "联系我们"
+
+    cart:
+      title: "您的购物车"
+      button:
+        empty: "清空购物车"
+        checkout: "结帐"
+
+  main:
+    title: "程序员书籍列表"
+    button:
+      add: "加入购物车"
+  checkout:
+    legend: "请输入详细信息"
+    name: "姓名"
+    address: "住址"
+    email: "邮箱"
+    pay_type: "支付方式"
+    pay_prompt: "请选择一种支付方式"
+    submit: "订购"
+
+  number:
+  currency:
+    format:
+      unit: "RMB"
+      precision: 2
+      separator: "."
+      delimiter: ","
+      format: "%u%n"
+
+
+  activerecord:
+    errors:
+      template:
+        body: "请修改下列错误"
+        header:
+          one: "在 {{model}} 中有一个错误"
+          other: "在 {{model}} 中有 {{count}} 个错误"
+      messages:
+        inclusion: "必须输入"
+        blank: "不允许为空"
+    modules:
+      order: "订单"
+    attributes:
+      order:
+        address: "住址"
+        name: "姓名"
+        email: "邮箱"
+        pay_type: "支付方式"
