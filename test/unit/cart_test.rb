@@ -13,4 +13,17 @@ class CartTest < ActiveSupport::TestCase
     assert_equal 2, cart.items.size
     assert_equal rails_book.price + ruby_book.price, cart.total_price
   end
+
+  test "add duplicate product" do
+    cart = Cart.new
+    rails_book = products(:rails_book)
+    ruby_book = products(:ruby_book)
+
+    cart.add_product rails_book
+    cart.add_product rails_book
+
+    assert_equal 2 * rails_book.price, cart.total_price
+    assert_equal 1, cart.items.size
+    assert_equal 2, cart.items[0].quantity
+  end
 end
