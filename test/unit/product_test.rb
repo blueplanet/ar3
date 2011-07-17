@@ -52,4 +52,14 @@ class ProductTest < ActiveSupport::TestCase
       assert !product.valid?, "#{name}を保存しています"
     end
   end
+
+  test "unique title" do
+    product = Product.new(:title => products(:ruby_book).title,
+                          :description => "yyy",
+                          :price => 1,
+                          :image_url => "fred.gif")
+
+    assert !product.save
+
+  end
 end

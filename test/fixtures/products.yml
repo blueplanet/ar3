@@ -1,11 +1,6 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+ruby_book:
+  title: Programming Ruby
+  description: Dummy description
+  price: 1234
+  image_url: ruby.png
 
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
