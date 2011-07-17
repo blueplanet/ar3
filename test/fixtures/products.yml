@@ -4,3 +4,8 @@ ruby_book:
   price: 1234
   image_url: ruby.png
 
+rails_book:
+  title: Rails Agile Web Application
+  description: Dummy
+  price: 2345
+  image_url: rails.png
