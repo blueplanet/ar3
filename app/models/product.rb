@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   validate :price_must_be_at_lease_a_cent
   validates_uniqueness_of :title
   validates_format_of :image_url,
-    :with => %r{\.{gif|jpg|png}$}i,
+    :with => %r{\.(gif|jpg|png)$}i,
     :message => 'はGIF、JPG、PNG画像のURLでないといけない'
 
   def price_must_be_at_lease_a_cent
